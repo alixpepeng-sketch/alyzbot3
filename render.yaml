@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: alyz-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: OWNER_NUMBER
+        value: "6283176204764"
+      # Aktifkan bila memakai persistent disk (paket berbayar), mount disk ke /var/data
+      # - key: SESSION_DIR
+      #   value: /var/data/session

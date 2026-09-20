@@ -1,0 +1,21 @@
+{
+  "name": "alyz-bot",
+  "version": "1.0.0",
+  "description": "Bot Alyz Web - bot WhatsApp Node.js + Baileys dengan web pairing code",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "latest",
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
+    "pino": "^9.5.0"
+  }
+}
