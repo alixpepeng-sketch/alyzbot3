@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Tautkan nomor WhatsApp ke Bot Alyz dengan kode pairing.">
+  <title>Bot Alyz Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="head">
+      <h1>Bot Alyz Web</h1>
+      <p class="lead">Tautkan nomor WhatsApp ke bot dengan kode pairing.</p>
+      <p class="state" role="status" aria-live="polite">
+        <span class="dot" id="dot" data-state="idle" aria-hidden="true"></span>
+        <span id="state-text">Memeriksa status bot</span>
+      </p>
+    </header>
+
+    <section class="panel" id="panel">
+      <form id="pair-form" novalidate>
+        <label for="number">Nomor WhatsApp</label>
+        <input id="number" name="number" type="tel" inputmode="numeric" autocomplete="tel"
+               placeholder="628123456789" aria-describedby="hint error" required>
+        <p class="hint" id="hint">Awali dengan kode negara, tanpa tanda plus.</p>
+        <p class="error" id="error" role="alert" hidden></p>
+        <button type="submit" id="submit" class="primary">Dapatkan kode</button>
+      </form>
+
+      <div class="result" id="result" hidden>
+        <p class="result-title">Kode pairing</p>
+        <div class="code" id="code" role="img" aria-label=""></div>
+        <button type="button" id="copy" class="plain">Salin kode</button>
+      </div>
+    </section>
+
+    <section class="steps" id="steps">
+      <h2>Cara menautkan</h2>
+      <ol>
+        <li>Buka WhatsApp di ponsel yang nomornya dipakai untuk bot.</li>
+        <li>Masuk ke Pengaturan, lalu Perangkat tertaut.</li>
+        <li>Pilih Tautkan perangkat, lalu Tautkan dengan nomor telepon.</li>
+        <li>Masukkan kode pairing yang tampil di halaman ini.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
